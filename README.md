@@ -8,6 +8,7 @@
 
 本次实测：50 条轨迹全部通过当前规则；40 条训练、10 条验证；抽样得到 3,995 个训练/验证帧样本。三个训练种子的离线 MAE 为 **2.5325 ± 0.0454**（数据原生单位），复制状态对照为 **2.9439**。这是离线回归结果，不能解释为抓取成功率。
 14 项单元测试通过，阶段缓存复用、安装和报告交互均已检查；详细范围见 [`reports/validation.json`](reports/validation.json)。
+CI 配方保存在 [`ci/github-actions.yml`](ci/github-actions.yml)，本次没有启用远程 Actions。当前 GitHub 授权没有 `workflow` 权限，因此先提供模板；日后可通过 GitHub 网页将其放入 `.github/workflows/tests.yml` 启用自动测试。
 
 | 模块 | 当前范围 |
 | --- | --- |
