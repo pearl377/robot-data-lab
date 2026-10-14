@@ -1,0 +1,7 @@
+{
+  "rows": 50,
+  "reviewed_rows": 0,
+  "errors": [],
+  "semantic_accuracy": "not_measured",
+  "note": "Schema/provenance validation is not semantic ground truth."
+}

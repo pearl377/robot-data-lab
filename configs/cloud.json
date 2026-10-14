@@ -1,0 +1,10 @@
+{
+  "lerobot_commit": "7e241bd630a3719a56157a497ce5d08f244784f1",
+  "lerobot_tag": "v0.6.1",
+  "dataset_repo": "lerobot/libero",
+  "dataset_revision": "a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4",
+  "vlm_repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+  "vlm_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+  "task_suite": "libero_spatial",
+  "status": "prepared_not_executed"
+}

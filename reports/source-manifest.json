@@ -1,0 +1,39 @@
+{
+  "repo_id": "lerobot/svla_so101_pickplace",
+  "revision": "f641879e22172be7e8161d5e6c1503c2d2feb657",
+  "license": "apache-2.0",
+  "files": {
+    "README.md": {
+      "bytes": 3710,
+      "sha256": "74a5ac3cf6de11b315eb4d01b1ce0e6250782fa809183f76b56aaa3d26a63d76"
+    },
+    "data/chunk-000/file-000.parquet": {
+      "bytes": 369943,
+      "sha256": "579ad57e2454359fa9f2c0e83525991bd2e0305b7b2914d0b1181da3c6ad9949"
+    },
+    "meta/episodes/chunk-000/file-000.parquet": {
+      "bytes": 72560,
+      "sha256": "191998bffd2680c477a4000270cf943bc423ba5fb54ee8b8244b57db062c5209"
+    },
+    "meta/info.json": {
+      "bytes": 3401,
+      "sha256": "254909942a6cbfb4692a239e4d0aa5c68ec8eb16f81b6593985ea7f2bb2823e3"
+    },
+    "meta/stats.json": {
+      "bytes": 5914,
+      "sha256": "4ae86bed785e0f98914812e87736e216139a22b43cf2b990e68384d85168c3c8"
+    },
+    "meta/tasks.parquet": {
+      "bytes": 2246,
+      "sha256": "1040cdef3328ec4376587152647df8e725e80a04210c426f891719e691c88533"
+    },
+    "videos/observation.images.side/chunk-000/file-000.mp4": {
+      "bytes": 45541633,
+      "sha256": "3b0f30282b21764fad29d46f4133e66e303dfcb95803510c790ca53dfd2bfe50"
+    },
+    "videos/observation.images.up/chunk-000/file-000.mp4": {
+      "bytes": 40124489,
+      "sha256": "73d93dae2091cb1b11995d17c34f67c1ec18db005e70acdf896d2307b47406d1"
+    }
+  }
+}

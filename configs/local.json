@@ -1,0 +1,26 @@
+{
+  "dataset": {
+    "repo_id": "lerobot/svla_so101_pickplace",
+    "revision": "f641879e22172be7e8161d5e6c1503c2d2feb657",
+    "root": "data/so_pickplace"
+  },
+  "audit": {
+    "min_frames": 60,
+    "max_state_step": 35.0,
+    "idle_state_step": 0.05,
+    "max_idle_fraction": 0.65,
+    "video_samples": 5,
+    "blur_variance_threshold": 20.0
+  },
+  "split": {"seed": 42, "validation_fraction": 0.2},
+  "training": {
+    "seeds": [11, 22, 33],
+    "steps": 400,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "sample_stride": 3,
+    "image_grid": 8,
+    "hidden_dim": 128,
+    "torch_threads": 2
+  }
+}

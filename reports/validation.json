@@ -1,0 +1,21 @@
+{
+  "unit_tests": {
+    "passed": 14,
+    "failed": 0,
+    "framework": "unittest",
+    "temp_directory": "workspace artifacts/test-tmp"
+  },
+  "editable_install": "passed",
+  "offline_pipeline": "passed",
+  "cache_resume": "passed (audit, features, experiments reused)",
+  "report_ui": {
+    "desktop": "visually reviewed",
+    "mobile_width": 390,
+    "overflow": false,
+    "episode_rows": 50,
+    "search_000_matches": 1
+  },
+  "http_preview": "loopback unavailable across this execution sandbox; direct HTML verified",
+  "smolvla_training": "not_executed (no CUDA / Linux runtime)",
+  "libero_evaluation": "not_executed"
+}

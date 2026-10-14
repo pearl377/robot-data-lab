@@ -1,0 +1,8 @@
+# Tested on Python 3.10 / Windows, CPU-only. Install in an isolated venv.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==1.26.3
+pandas==2.1.4
+pyarrow==21.0.0
+av==16.1.0
+torch==2.1.1+cpu
+Pillow==10.0.1
