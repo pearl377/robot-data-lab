@@ -1,0 +1,45 @@
+# 作品集与简历说明
+
+## 项目定位
+
+**Robot Data Lab：真实机器人数据质量管线与 CPU 模仿学习基线**。
+
+本项目基于公开 LeRobot 数据实现数据工程和离线实验流程；SmolVLA / LIBERO 仅提供固定版本的 GPU 集成入口，尚无该部分实跑结果。
+
+## 简历描述示例
+
+- 搭建基于 LeRobot v3 格式的机器人数据处理管线，覆盖公开数据下载、SHA-256 完整性校验、轨迹质量审计、筛选、标注 sidecar 管理和可交互报告，处理 50 条双相机演示、11,939 帧数据。
+- 实现按轨迹划分的行为克隆实验，使用双相机 RGB 网格与关节状态训练 MLP；在 40 条训练轨迹、10 条验证轨迹上完成 3 个随机种子实验，离线动作 MAE 为 2.5325 ± 0.0454，复制当前状态对照为 2.9439。
+- 实现基于配置、代码、数据版本及环境指纹的阶段缓存与断点恢复，记录失败阶段和实验溯源信息；用 14 项单元测试覆盖数据异常、划分泄漏、训练确定性和视频时间戳对齐。
+
+指标使用数据原生单位，是留出轨迹上的离线动作回归误差；标准差来自 3 个训练种子。本次筛选规则保留了全部轨迹，不能据此声称数据过滤提高模型性能。
+
+## 证据与复现入口
+
+| 内容 | 证据 |
+| --- | --- |
+| 数据质量与轨迹列表 | [`reports/audit.json`](../reports/audit.json) |
+| 多种子结果、逐关节误差与对照 | [`reports/experiments.json`](../reports/experiments.json) |
+| 数据版本、文件校验和 | [`reports/source-manifest.json`](../reports/source-manifest.json) |
+| 配置、代码指纹与执行环境 | [`reports/provenance.json`](../reports/provenance.json) |
+| 检查范围与最新复跑记录 | [`reports/validation.json`](../reports/validation.json) |
+| 可交互报告 | 下载仓库后打开 [`reports/index.html`](../reports/index.html) |
+| 安装与执行命令 | [`README.md`](../README.md#本地启动windows--python-310) |
+
+## 面试演示顺序
+
+1. 运行 `python -m robot_data_lab doctor`，说明当前 CPU 环境及 GPU 实验状态。
+2. 展示一条轨迹的结构、任务标注、相机时间戳和质量检查结果。
+3. 运行 `python -m robot_data_lab run-local --offline`，演示完整性校验与阶段缓存；追加 `--force` 可重新执行全部计算阶段。
+4. 打开报告，说明为什么按完整轨迹划分，为什么必须报告复制状态对照，以及离线 MAE 的局限。
+5. 展示 `cloud plan` 的固定版本训练与评测命令，明确后续 Linux/CUDA 实验尚待执行。
+
+## 与原始目标的对应关系
+
+| 目标 | 已有内容 | 尚未完成的内容 |
+| --- | --- | --- |
+| 真机数据采集、清洗和质评 | 公开真机数据的读取、审计、筛选 | 自有机器人采集与闭环验证 |
+| Pipeline 与自动化 | CLI、完整性校验、缓存、失败记录、报告 | CI 配方尚未启用为 GitHub Actions |
+| VLA 数据组织与标注 | 轨迹、任务标签关联及标注导出、格式校验 | 人工语义复核、标签更正回写训练数据 |
+| 训练、评测与分析 | CPU MLP 行为克隆、多种子离线实验与对照 | VLA 训练及 LIBERO 闭环评测 |
+| VLM / VLA / 模仿学习研发 | MLP 基线实现与实验设计、上游集成入口 | VLM / VLA 算法创新或论文指标复现 |

@@ -4,6 +4,8 @@
 
 工程状态和结果以 [`reports/index.html`](reports/index.html)、[`reports/experiments.json`](reports/experiments.json) 为准。
 
+用于求职展示时，可参考[简历描述、验证证据和面试演示说明](docs/portfolio.md)。
+
 ![本地实测报告预览](reports/preview.png)
 
 本次实测：50 条轨迹全部通过当前规则；40 条训练、10 条验证；抽样得到 3,995 个训练/验证帧样本。三个训练种子的离线 MAE 为 **2.5325 ± 0.0454**（数据原生单位），复制状态对照为 **2.9439**。这是离线回归结果，不能解释为抓取成功率。

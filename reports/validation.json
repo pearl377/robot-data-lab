@@ -17,5 +17,53 @@
   },
   "http_preview": "loopback unavailable across this execution sandbox; direct HTML verified",
   "smolvla_training": "not_executed (no CUDA / Linux runtime)",
-  "libero_evaluation": "not_executed"
+  "libero_evaluation": "not_executed",
+  "latest_cpu_reproduction": {
+    "verified_at_utc": "2026-10-14T06:35:49.769639+00:00",
+    "pipeline_command": "python -m robot_data_lab run-local --offline --force",
+    "pipeline_exit_code": 0,
+    "cached_resume_exit_code": 0,
+    "unit_tests_command": "python -m unittest discover -s tests -v",
+    "unit_tests_passed": 14,
+    "unit_tests_failed": 0,
+    "annotation_rows": 50,
+    "annotation_errors": 0,
+    "all_stage_statuses": {
+      "audit": "complete",
+      "features": "complete",
+      "experiments": "complete"
+    },
+    "cached_stages": [
+      "audit",
+      "features",
+      "experiments"
+    ],
+    "code_fingerprint": "04780d4c27ae20e5aada2aeba0db82a6ab528be3d9ae2e620feb653e4dae2b7a",
+    "config_fingerprint": "ef70908c37dbac0c920196472ca100acd3e78940ed86f2ed599f92551e0b4d0a",
+    "source_manifest_hash": "63b8516d3e5d37badbbb6ee3107b129c72a759becd7ddf43008b389498da43cd",
+    "environment": {
+      "python": "3.10.11",
+      "platform": "Windows",
+      "packages": {
+        "numpy": "1.26.3",
+        "pandas": "2.1.4",
+        "pyarrow": "21.0.0",
+        "av": "16.1.0",
+        "torch": "2.1.1",
+        "Pillow": "10.0.1",
+        "lerobot": null
+      },
+      "cuda_available": false,
+      "cuda_devices": 0,
+      "gpu_training_ready": false
+    },
+    "aggregate": {
+      "raw": {
+        "mean_mae": 2.5325218041737876,
+        "std_mae": 0.045369524459674876,
+        "seeds": 3
+      }
+    },
+    "gpu_experiments_executed": false
+  }
 }

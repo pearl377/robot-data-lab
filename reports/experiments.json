@@ -21,7 +21,7 @@
       "train_episodes": 40,
       "train_samples": 3171,
       "steps": 400,
-      "seconds": 1.3148727000225335,
+      "seconds": 1.3116766999883112,
       "history": [
         {
           "step": 1,
@@ -124,7 +124,7 @@
       "train_episodes": 40,
       "train_samples": 3171,
       "steps": 400,
-      "seconds": 0.9437258999969345,
+      "seconds": 0.9638491000223439,
       "history": [
         {
           "step": 1,
@@ -227,7 +227,7 @@
       "train_episodes": 40,
       "train_samples": 3171,
       "steps": 400,
-      "seconds": 0.9590657000080682,
+      "seconds": 0.9309851000143681,
       "history": [
         {
           "step": 1,
